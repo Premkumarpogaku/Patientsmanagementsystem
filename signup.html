@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Signup</title>
+    <style>
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/012/604/205/large_2x/doctor-icon-virtual-screen-health-care-and-medical-on-background-copy-space-free-photo.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form {
+            margin-top: 50px;
+            width: 400px; /* Adjust the width of the form */
+            margin: 0 auto; /* Center the form horizontally */
+            background-color: #fff;
+            padding: 20px; /* Add some padding */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+        label {
+            font-size: 18px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Make input fields full width */
+            padding: 10px; /* Add padding */
+            margin-bottom: 15px; /* Add some space between input fields */
+            border-radius: 5px; /* Rounded corners */
+            border: 1px solid #ccc; /* Add border */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+            font-size: 16px; /* Adjust the font size of input fields */
+        }
+        button {
+            width: 100%; /* Make button full width */
+            padding: 10px; /* Add padding */
+            border: none; /* Remove border */
+            background-color: #1181dc; /* Blue background */
+            color: white; /* White text */
+            border-radius: 10px; /* Rounded corners */
+            box-sizing: border-box; 
+            cursor: pointer; /* Add cursor pointer */
+            font-size: 18px; /* Adjust the font size of button */
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Patient Signup</h2>
+    <form id="signupForm" action="/signup" method="POST">
+    <!-- <form id="signupForm"> -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="password">Create Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirmPassword">Confirm Password:</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+        <span id="passwordMatchError" class="error-message"></span><br>
+        <button type="submit"> sign up</button>
+    </form>
+</body>
+</html>

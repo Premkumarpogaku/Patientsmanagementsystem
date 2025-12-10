@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="hospital.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background-color: #e2e2e2; */
+    background-image: url("https://w0.peakpx.com/wallpaper/955/713/HD-wallpaper-doctor-medical.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background-color: rgb(12, 88, 113);
+    color: white;
+}
+ul {
+    display: flex;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-inline: 20px;
+}
+ul li a:hover{
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: rgb(5, 36, 128); */
+    color: white;
+    padding: 8px;
+    height: 600px;
+    margin-top: 55px;
+    background-image: url("https://t3.ftcdn.net/jpg/02/11/15/66/360_F_211156620_CeBr5etdTNXLb231sFcQ8M9YD1OY5IW8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mainText h1{
+    font-size: 55px;
+}
+
+.mainText h3{
+    font-size: 35px;
+    margin-top: 12px;
+}
+.mainText button{
+    width: 140px;
+    height: 40px;
+    border: none;
+    margin-top: 22px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.mainText button:hover{
+    border: 2px solid black;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}  
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>HEALING CLINICS</h1>
+            </div>
+            <i id="bar" class="fa-solid fa-bars"></i>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doctors.html">Doctor's</a></li>
+                <li><a href="patient.html">Patient Review's</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="doctorlogin.html">Doctor Login</a></li>
+                <li><a href="registration.html">registration</a></li>
+                <li><a href="#" onclick="location.href='http://127.0.0.1:3000'">signup</a></li>
+                <li><a href="logout.html">Logout</a></li>
+
+
+            </ul>
+
+        </nav>
+        
+
+        <div class="main">
+            <div class="mainText">
+                <h1>In the heart of a small hospital,<br>big miracles happen.</h1>
+                <h3>Best Team's</h3>
+                <div id="additionalContent" style="display: none;">
+                    <p>Nestled in the heart of our community,
+                    Harmony Healing Clinic stands as a beacon of hope and restoration.
+                    More than just a hospital, we are a sanctuary of healing, dedicated to nurturing both body and spirit.</p>
+                </div>
+                <button id="showMoreBtn">Show More</button>
+            </div>
+            <!-- <img src="mains.png" alt=""> -->
+        </div>
+        
+        <script>
+            document.getElementById("showMoreBtn").addEventListener("click", function() {
+                var additionalContent = document.getElementById("additionalContent");
+                var btn = document.getElementById("showMoreBtn");
+                if (additionalContent.style.display === "none") {
+                    additionalContent.style.display = "block";
+                    btn.innerText = "Show Less";
+                } else {
+                    additionalContent.style.display = "none";
+                    btn.innerText = "Show More";
+                }
+            });
+        </script>
+        
+
+
+        
+ </body>
+ </html>

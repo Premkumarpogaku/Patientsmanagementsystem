@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/012/604/205/large_2x/doctor-icon-virtual-screen-health-care-and-medical-on-background-copy-space-free-photo.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form {
+            margin-top: 100px;
+            width: 400px; 
+            margin: 0 auto; 
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        label {
+            font-size: 20px; 
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            box-sizing: border-box; 
+            font-size: 16px; 
+        }
+        button {
+            width: 100%; 
+            padding: 10px; 
+            border: 5px;
+            background-color: #1181dc; 
+            color: white; 
+            border-radius: 10px; 
+            box-sizing: border-box; 
+            cursor: pointer; 
+            font-size: 18px; 
+        }
+    </style>
+</head>
+<body>
+    <h2>patients's Login</h2>
+    <form action= "/loggedin" id="loginForm" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+        <a href="#" onclick="location.href='http://127.0.0.1:3000'">signup</a>
+    </form>
+</body>
+</html>
